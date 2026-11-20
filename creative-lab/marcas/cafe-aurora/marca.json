@@ -1,0 +1,33 @@
+{
+  "nome": "Café Aurora",
+  "slug": "cafe-aurora",
+  "instagram": "@cafeauroraexemplo",
+  "cores": {
+    "fundo": "#172E2B",
+    "texto": "#FFFFFF",
+    "texto_suave": "#F3EADD",
+    "apoio": "#F3EADD",
+    "destaque": "#FFD39D",
+    "primaria": "#678D76"
+  },
+  "fontes": {
+    "titulo": {
+      "familia": "Arial",
+      "peso": 700
+    },
+    "texto": {
+      "familia": "Arial",
+      "peso": 400
+    },
+    "etiqueta": {
+      "familia": "Arial",
+      "peso": 700
+    }
+  },
+  "logo": {
+    "arquivo": "logo.svg"
+  },
+  "regras": {
+    "telefone_na_arte": false
+  }
+}

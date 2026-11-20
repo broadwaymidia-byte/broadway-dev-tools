@@ -1,0 +1,24 @@
+{
+  "marca": "cafe-aurora",
+  "fotos": [
+    {
+      "arquivo": "cena-1.png"
+    },
+    {
+      "arquivo": "cena-2.png"
+    },
+    {
+      "arquivo": "cena-3.png"
+    }
+  ],
+  "gancho": {
+    "texto": "Seu café, sem pressa",
+    "destaque": "café"
+  },
+  "textos": [
+    "Comece pelo aroma"
+  ],
+  "duracao_gancho": 1.5,
+  "duracao_corte": 0.5,
+  "duracao_cartela": 2
+}

@@ -1,0 +1,41 @@
+{
+  "marca": "cafe-aurora",
+  "nome": "cafe-aurora",
+  "formatos": [
+    "feed",
+    "story"
+  ],
+  "mockup": true,
+  "legenda": "Conheça um jeito simples de preparar seu café. Comece pelo aroma, acerte a moagem e sirva sem pressa.",
+  "pecas": [
+    {
+      "tipo": "capa",
+      "etiqueta": "Guia de preparo",
+      "titulo": [
+        "Seu café,",
+        "*sem pressa*"
+      ],
+      "texto": "Três ideias para o preparo do dia a dia."
+    },
+    {
+      "tipo": "lista",
+      "titulo": [
+        "Comece",
+        "pelo aroma"
+      ],
+      "itens": [
+        "Escolha grãos frescos",
+        "Ajuste a moagem",
+        "Sirva logo após o preparo"
+      ]
+    },
+    {
+      "tipo": "cta",
+      "titulo": [
+        "Experimente",
+        "amanhã"
+      ],
+      "cta": "Salve para mais tarde"
+    }
+  ]
+}

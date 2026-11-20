@@ -1,11 +1,16 @@
 # Broadway Dev Tools
 
-Open-source tools, plugins and integrations for marketing automation, business management and AI-powered applications.
+Ferramentas de código aberto da Broadway Mídia para produção de conteúdo.
 
-## Sobre o projeto
+- [Broadway Creative Lab](creative-lab/) — plugin para Claude Code e
+  renderizador de criativos com guias de marca, mockups e conferência
+  automática.
+- [Estúdio de vídeo](video-studio/) — motor em Python e FFmpeg que transforma
+  imagens e textos em um vídeo vertical.
 
-Este repositório apresenta o trabalho da Broadway Mídia, agência de publicidade de Uberlândia, Minas Gerais, no desenvolvimento do Broadway App. A proposta é compartilhar ferramentas reaproveitáveis para automação de marketing, gestão e integrações com IA.
+Cada ferramenta inclui instruções para reproduzir o exemplo Café Aurora,
+uma marca fictícia com materiais criados para as demonstrações.
 
-## Estado atual
+## Licença
 
-O projeto público está na fase inicial de documentação. As demonstrações usarão dados fictícios e configurações de exemplo.
+O código deste repositório é distribuído sob a [licença MIT](LICENSE).

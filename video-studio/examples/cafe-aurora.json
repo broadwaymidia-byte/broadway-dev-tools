@@ -1,0 +1,27 @@
+{
+  "marca": {
+    "nome": "Café Aurora",
+    "fontes": {
+      "titulo": {
+        "familia": "Pillow Default",
+        "peso": 700
+      },
+      "texto": {
+        "familia": "Pillow Default",
+        "peso": 400
+      },
+      "etiqueta": {
+        "familia": "Pillow Default",
+        "peso": 700
+      }
+    },
+    "cores": {
+      "fundo": "#172E2B",
+      "texto": "#FFFFFF",
+      "texto_suave": "#F3EADD",
+      "apoio": "#F3EADD",
+      "destaque": "#FFD39D",
+      "primaria": "#678D76"
+    }
+  }
+}

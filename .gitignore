@@ -7,3 +7,9 @@ dist/
 *.log
 *.pem
 *.key
+.venv/
+__pycache__/
+creative-lab/exemplos/saida-*/
+video-studio/examples/cenas/
+video-studio/examples/logos/
+video-studio/saida/

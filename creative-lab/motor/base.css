@@ -1,0 +1,91 @@
+/* Estrutura comum a todas as marcas. Cada marca muda o visual em marcas/<slug>/estilo.css */
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:var(--w);height:var(--h);overflow:hidden;background:#000}
+body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.peca{position:relative;width:var(--w);height:var(--h);overflow:hidden;background:var(--fundo);color:var(--texto);
+  font-family:var(--fonte-texto),sans-serif;font-weight:var(--peso-texto)}
+.bg{position:absolute;inset:0;z-index:0}
+.bg .foto{width:100%;height:100%;object-fit:cover;display:block}
+.bg .veu{position:absolute;inset:0}
+.deco{position:absolute;pointer-events:none;z-index:1}
+.topo{position:absolute;top:var(--zt);left:var(--ze);right:var(--zd);display:flex;justify-content:center;align-items:flex-start;z-index:5}
+.logo{height:var(--logo-h,120px);width:auto;display:block;object-fit:contain}
+.num{position:absolute;z-index:6;right:var(--zd);top:calc(var(--zt) + 4px);font-size:24px;letter-spacing:.08em;color:var(--apoio);font-family:var(--fonte-texto)}
+.miolo{position:absolute;z-index:4;left:var(--ze);right:var(--zd);
+  top:calc(var(--zt) + var(--topo-reserva,170px));bottom:calc(var(--zb) + var(--rodape-reserva,80px));
+  display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:var(--gap,34px);overflow:hidden}
+.cartao{display:flex;flex-direction:column;justify-content:center;align-items:inherit;text-align:inherit;gap:inherit;width:100%;max-height:100%;min-height:0}
+.etiqueta{display:inline-flex;max-width:100%;font-family:var(--fonte-etiqueta),sans-serif;font-weight:var(--peso-etiqueta);
+  letter-spacing:var(--esp-etiqueta);text-transform:uppercase;font-size:28px;line-height:1.2}
+.titulo{font-family:var(--fonte-titulo),sans-serif;font-weight:var(--peso-titulo);font-style:var(--estilo-titulo);
+  text-transform:var(--caixa-titulo);font-size:var(--titulo-fs,112px);line-height:1.06;max-width:100%;--max-linhas:4;
+  overflow-wrap:normal;word-break:normal;hyphens:none}
+.titulo .ln{text-wrap:balance}
+.texto{text-wrap:pretty}
+.lista li span{text-wrap:pretty}
+.titulo .ln{display:block}
+.titulo em{font-style:inherit}
+.texto{font-size:var(--texto-fs,40px);line-height:1.32;max-width:var(--texto-max,880px);color:var(--texto-suave)}
+.texto em{font-style:normal;font-weight:800;color:var(--destaque)}
+.lista{list-style:none;display:flex;flex-direction:column;gap:18px;width:100%;max-width:900px;text-align:left}
+.lista li{display:flex;align-items:center;gap:22px;font-size:42px;line-height:1.25}
+.lista li i{font-style:normal;flex:0 0 18px;height:18px;border-radius:50%;background:var(--destaque)}
+.lista li em{font-style:normal;color:var(--destaque);font-weight:800}
+.oferta{display:flex;flex-direction:column;align-items:center;gap:8px}
+.p-nome{font-size:40px;font-weight:700;line-height:1.15}
+.p-de{font-size:28px;opacity:.85}
+.p-valor{font-family:var(--fonte-titulo),sans-serif;font-weight:var(--peso-titulo);font-size:170px;line-height:.95;color:var(--destaque);white-space:nowrap}
+.p-valor small{font-size:.32em;vertical-align:.95em;margin-right:.08em}
+.p-valor sup{font-size:.36em;vertical-align:.95em}
+.p-cond{font-size:30px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+.cta{display:inline-flex;font-family:var(--fonte-etiqueta),sans-serif;font-weight:var(--peso-etiqueta);font-size:30px;letter-spacing:.08em;text-transform:uppercase}
+.cta em{font-style:normal}
+.produto-box{display:flex;justify-content:center;min-height:0;flex:0 1 auto}
+.produto{max-height:var(--produto-h,340px);max-width:100%;object-fit:contain;display:block}
+.rodape{position:absolute;z-index:5;left:var(--ze);right:var(--zd);bottom:var(--zb);display:flex;justify-content:space-between;align-items:flex-end;gap:20px}
+.handle{font-size:24px;color:var(--apoio);letter-spacing:.02em}
+.rod-txt{font-size:26px}
+.selo{display:none}
+em.dest{font-style:inherit}
+/* stories: mais espaço vertical, letra maior */
+.f-story .titulo{font-size:calc(var(--titulo-fs,112px) * 1.18)}
+.f-story .texto{font-size:calc(var(--texto-fs,40px) * 1.12)}
+.f-story .etiqueta{font-size:31px}
+/* foto só na parte de cima (imagem_modo: "topo") */
+.bg.modo-topo{bottom:auto;height:var(--foto-topo,44%)}
+.peca:has(.bg.modo-topo) .miolo{top:calc(var(--foto-topo,44%) + 40px)}
+/* antes e depois: duas fotos lado a lado (campos "antes" e "depois") */
+.bg.ad{display:grid;grid-template-columns:1fr 1fr;gap:10px;bottom:auto;height:var(--ad-h,58%);background:#fff}
+.bg.ad figure{position:relative;overflow:hidden;margin:0}
+.bg.ad figcaption{position:absolute;left:24px;bottom:24px}
+.bg.ad figcaption span{display:inline-block;padding:10px 24px;border-radius:999px;font-family:var(--fonte-etiqueta),sans-serif;font-weight:700;font-size:28px;text-transform:uppercase;letter-spacing:.08em;background:#fff;color:#111}
+.peca:has(.bg.ad) .miolo{top:calc(var(--ad-h,58%) + 40px)}
+/* cartela de cor: amostras tipo leque/chip de tinta (campo "cores": [{nome, hex, ref}]) */
+.cartela{display:grid;grid-template-columns:repeat(var(--chips,3),1fr);gap:18px;width:100%}
+.cartela.n2{--chips:2}.cartela.n3{--chips:3}.cartela.n4{--chips:4}
+.chip{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 14px 34px rgba(0,0,0,.18);display:flex;flex-direction:column}
+.chip .amostra{height:150px}
+.chip-info{padding:14px 16px 16px;display:flex;flex-direction:column;gap:4px;text-align:left}
+.chip-info b{font-size:24px;color:#141414;font-weight:700;line-height:1.15}
+.chip-info span{font-size:18px;color:#555}
+.bg.modo-topo .veu{display:none}
+.bg.ad .ad-antes figcaption{left:var(--ze)}
+/* erro x acerto (campo "comparar": {"erro": "...", "acerto": "..."}) */
+.comparar{display:flex;flex-direction:column;gap:18px;width:100%;max-width:900px}
+.cmp{display:grid;grid-template-columns:64px 1fr;column-gap:22px;align-items:center;padding:24px 28px;border-radius:20px;text-align:left}
+.cmp i{grid-row:1/3;width:64px;height:64px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-style:normal;font-weight:800;font-size:34px;color:#fff}
+.cmp b{font-family:var(--fonte-etiqueta),sans-serif;font-size:22px;letter-spacing:.14em;text-transform:uppercase}
+.cmp span{font-size:34px;font-weight:600;line-height:1.2}
+.cmp-erro{background:#fff}.cmp-erro i{background:#D93025}.cmp-erro b{color:#B3261E}.cmp-erro span{color:#1d1d1d}
+.cmp-acerto{background:#fff}.cmp-acerto i{background:#1E8E3E}.cmp-acerto b{color:#137333}.cmp-acerto span{color:#1d1d1d}
+/* "essa ou essa?": 2 amostras grandes numeradas */
+.cartela.n2 .amostra{height:400px;position:relative}
+.cartela.n2 .chip-info b{font-size:30px}
+.chip-info:has(b:empty):has(span:empty){display:none}
+/* ===== PADRÃO DA AGÊNCIA: toda foto com as bordas esfumando (camada transparente nas laterais) ===== */
+.peca.com-foto .bg{background:var(--fundo)}
+.peca.com-foto .bg .foto{-webkit-mask-image:radial-gradient(ellipse 80% 78% at 50% 42%,#000 50%,transparent 100%);mask-image:radial-gradient(ellipse 80% 78% at 50% 42%,#000 50%,transparent 100%)}
+.peca .bg.modo-topo .foto{-webkit-mask-image:radial-gradient(ellipse 75% 85% at 50% 30%,#000 50%,transparent 100%);mask-image:radial-gradient(ellipse 75% 85% at 50% 30%,#000 50%,transparent 100%)}
+.peca .bg.modo-topo{background:transparent}
+.peca .bg.ad .foto{-webkit-mask-image:none;mask-image:none}
+.peca.sem-borda-suave .bg .foto{-webkit-mask-image:none;mask-image:none}
