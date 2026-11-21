@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="pt-BR">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Planejamento mensal | Café Aurora</title>
+<style>
+  /* Personalize as cores aqui. Substitua os textos e as datas no HTML. */
+  :root { --escuro: #172f2a; --claro: #f5f3ec; --destaque: #ffd19a; --linha: #d8dfda; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--claro); color: var(--escuro); font: 14px/1.45 system-ui, sans-serif; }
+  main { max-width: 850px; margin: auto; }
+  section { background: white; padding: 36px; margin: 20px 0; }
+  h1, h2, h3, p { margin: 0 0 10px; }
+  h1 { font-size: 44px; }
+  h2 { font-size: 26px; }
+  h3 { margin-top: 18px; }
+  .capa { color: white; background: var(--escuro); min-height: 65vh; padding: 52px 36px; }
+  .capa h1 { color: var(--destaque); }
+  .rotulo, .status { font-size: 11px; font-weight: 750; letter-spacing: .08em; text-transform: uppercase; }
+  .status { display: inline-block; margin-bottom: 32px; border: 1px solid var(--destaque); padding: 5px 10px; border-radius: 20px; }
+  .sumario { margin-top: 40px; padding: 0; list-style: none; }
+  .sumario li { padding: 12px 0; border-bottom: 1px solid #ffffff40; }
+  .tabela { overflow-x: auto; }
+  table { border-collapse: collapse; width: 100%; table-layout: fixed; margin-bottom: 14px; }
+  th, td { padding: 8px; border: 1px solid var(--linha); vertical-align: top; overflow-wrap: anywhere; }
+  th { text-align: left; background: var(--escuro); color: white; }
+  .calendario td { height: 55px; }
+  .calendario span { display: block; margin-top: 3px; padding: 2px 4px; background: var(--destaque); }
+  .quadro th:first-child, .quadro th:last-child { width: 22%; }
+  .ficha, .nota { padding: 12px 16px; background: var(--claro); margin-bottom: 12px; }
+  .ficha h3 { margin-top: 0; }
+  .ficha p:last-child, .nota p:last-child { margin-bottom: 0; }
+  footer { margin-top: 24px; padding-top: 10px; border-top: 1px solid var(--linha); font-size: 11px; }
+  @page { size: A4; margin: 14mm; }
+  @media print {
+    * { print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+    body { background: white; font-size: 11px; }
+    section { margin: 0; padding: 0; break-before: page; }
+    .capa { break-before: auto; min-height: 235mm; padding: 16mm; }
+    .ficha, .nota, tr { break-inside: avoid; }
+    thead { display: table-header-group; }
+  }
+</style>
+<main>
+  <section class="capa" aria-labelledby="titulo">
+    <p class="status">Rascunho · aguardando aprovação</p>
+    <p class="rotulo">Planejamento de conteúdo</p>
+    <h1 id="titulo">Café Aurora</h1>
+    <p>Fevereiro de 2027 · Exemplo fictício</p>
+    <ol class="sumario">
+      <li>01 · Calendário visual e quadro de produção</li>
+      <li>02 · Vídeo, fotos, carrossel e publicações</li>
+      <li>03 · Sequências de stories e pendências</li>
+    </ol>
+    <footer>Modelo mensal · Broadway Dev Tools</footer>
+  </section>
+  <section aria-labelledby="calendario">
+    <p class="rotulo">01 · Visão do mês</p>
+    <h2 id="calendario">Fevereiro de 2027</h2>
+    <div class="tabela">
+      <table class="calendario" aria-label="Calendário visual">
+        <thead><tr><th>Dom</th><th>Seg</th><th>Ter</th><th>Qua</th><th>Qui</th><th>Sex</th><th>Sáb</th><th>Stories</th></tr></thead>
+        <tbody>
+          <tr><td></td><td>1</td><td>2</td><td>3<span>Vídeo</span></td><td>4</td><td>5</td><td>6</td><td>Preparo</td></tr>
+          <tr><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12<span>Foto</span></td><td>13</td><td>Bastidores</td></tr>
+          <tr><td>14</td><td>15</td><td>16</td><td>17</td><td>18<span>Carrossel</span></td><td>19</td><td>20</td><td>Moagem</td></tr>
+          <tr><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26<span>Card</span></td><td>27</td><td>Enquete</td></tr>
+          <tr><td>28</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+        </tbody>
+      </table>
+      <h3>Quadro de produção</h3>
+      <table class="quadro">
+        <thead><tr><th>Data</th><th>Peça</th><th>Situação</th></tr></thead>
+        <tbody>
+          <tr><td>03/02</td><td>Vídeo · Café sem pressa</td><td>Roteiro pronto</td></tr>
+          <tr><td>12/02</td><td>Foto · Da moagem à xícara</td><td>A captar</td></tr>
+          <tr><td>18/02</td><td>Carrossel · Três ideias para o preparo</td><td>Falta imagem</td></tr>
+          <tr><td>26/02</td><td>Card · Faça uma pausa para o café</td><td>A confirmar</td></tr>
+          <tr><td>Ao longo do mês</td><td>Stories · Preparo, bastidores, moagem e enquete</td><td>Rascunho</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  <section aria-labelledby="pautas">
+    <p class="rotulo">02 · Pautas e roteiros</p>
+    <h2 id="pautas">O que vamos produzir</h2>
+    <article class="ficha">
+      <h3>03/02 · Vídeo: Café sem pressa</h3>
+      <p><strong>Captação:</strong> filme a moagem de perto, a água passando pelo filtro e a xícara ao lado da janela. Termine no mesmo ângulo da abertura.</p>
+      <p><strong>Edição:</strong> gancho na abertura “Como começa o seu café?”. Faça cortes nas três etapas e feche com a marca.</p>
+      <p><strong>Legenda:</strong> Separe os grãos, ajuste a moagem e sirva logo após o preparo.</p>
+    </article>
+    <article class="ficha">
+      <h3>12/02 · Foto: Da moagem à xícara</h3>
+      <p><strong>A captar:</strong> xícara e café moído sobre a bancada, com luz lateral suave.</p>
+      <p><strong>Legenda:</strong> O aroma começa antes de a água tocar o café.</p>
+    </article>
+    <article class="ficha">
+      <h3>18/02 · Carrossel: Três ideias para o preparo</h3>
+      <p><strong>Telas:</strong> capa, dicas de preparo e convite para salvar.</p>
+      <p><strong>A captar:</strong> grãos, moedor e xícara servida.</p>
+    </article>
+    <article class="ficha">
+      <h3>26/02 · Card: Faça uma pausa para o café</h3>
+      <p><strong>Arte:</strong> tipografia sobre fundo liso e assinatura da marca.</p>
+      <p><strong>Legenda:</strong> Que tal preparar a sua xícara favorita hoje?</p>
+    </article>
+    <p class="rotulo">03 · Stories e pendências</p>
+    <h2>Sequências de stories</h2>
+    <p>Semana 1: bastidor do preparo. Semana 2: grãos e utensílios. Semana 3: comparação de moagem. Semana 4: enquete sobre métodos de preparo.</p>
+    <div class="nota"><strong>A confirmar:</strong> datas de captação e aprovação do card.</div>
+  </section>
+</main>
+</html>
