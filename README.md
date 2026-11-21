@@ -19,6 +19,15 @@ Carrossel de três slides gerado localmente em um Mac com a versão pública do 
 
 [Reproduza o exemplo com as instruções do Creative Lab](creative-lab/).
 
+## Planejamento mensal de conteúdo
+
+[Abra o modelo editável em HTML](planejamento-mensal.html). Baixe o
+arquivo, abra no navegador e use **Imprimir → Salvar como PDF**.
+Ative a impressão de planos de fundo para preservar as cores. Para
+adaptar o modelo, edite as cores no bloco `:root`, os textos e as datas.
+O exemplo do Café Aurora inclui calendário, quadro de produção,
+roteiros, pautas de captação e ideias de stories.
+
 ## Licença
 
 O código deste repositório é distribuído sob a [licença MIT](LICENSE).
